@@ -1,5 +1,9 @@
 """
-@wfile
+@file src/writer.py
+@version 1.0
+@author CN
+@author Gudule
+@date fev 2017
 
 Contient du bordel (en attendant de ranger tout ça, c'est d'ici que je fais mes tests).
 
@@ -74,3 +78,4 @@ s.write_save()
 
 # s = QuatrainsWriter(maindom="AST", nb=3)
 # s.write_save()
+

@@ -1,5 +1,9 @@
 """
 @package lexicon
+@version 1.0
+@author CN
+@author Gudule
+@date fev 2017
 
 Contient le lexique, une grosse base de données sur laquelle se base Potiron.
 Cette DB a été contruite à partir de trois sources libres :
@@ -17,3 +21,4 @@ Sous licence "Creative Commons" (Attribution, Noncommercial, Share Alike)
 @todo mettre une description précise de la DB par ici.
 
 """
+

@@ -1,9 +1,9 @@
 """
-@file src/mainframe/mainframe.py
-@version 1.1
+@file src/frames/mainframe.py
+@version 1.0
 @author CN
 @author Gudule
-@date jan 2017
+@date fev 2017
 
 Cette fenêtre donne accès à certaines fonctions de potiron (pour l'instant
 très peu).
@@ -134,3 +134,4 @@ class MainFrame(Frame):
             self.output.insert("1.0", out)
         else:
             print("Cette fonction n'est pas disponible.")
+

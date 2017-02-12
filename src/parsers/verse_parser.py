@@ -1,10 +1,10 @@
 
 """
 @file src/parsers/verse_parser.py
-@version 1.1
+@version 1.0
 @author CN
 @author Gudule
-@date jan 2017
+@date fev 2017
 
 Ce fichier contient un parser ainsi que les sous-fonctions traitant les mots
 pour en extraire le nombre de syllabes.
@@ -347,3 +347,4 @@ if __name__ == "__main__":
                 print(v.err)
                 print(v.analysis)
     pass
+

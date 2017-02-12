@@ -1,5 +1,9 @@
 """
-@file mutators.py
+@file src/mutators/mutators.py
+@version 1.0
+@author CN
+@author Gudule
+@date fev 2017
 
 Les mutateurs sont l'intérêt principal de Potiron. (Le concept fameux, comme
 le nom, sont empruntés à un blog fort intéressant dont j'ai malheureusement
@@ -174,3 +178,4 @@ class DomMutator(SelectiveMutator):
             return choices
         else:
             return [tmp]
+

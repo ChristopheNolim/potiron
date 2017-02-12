@@ -1,5 +1,9 @@
 """
-@file structurator.py
+@file src/mutators/structurator.py
+@version 1.0
+@author CN
+@author Gudule
+@date fev 2017
 
 Chargé de créér des structures d'alexandrins.
 
@@ -113,3 +117,4 @@ class Structurator:
                 res.append( random.choice(self.d[i]) + [_VIRG] )
             res.append ( random.choice(self.d[l[-1]]) + [_POINT] )
         return res
+

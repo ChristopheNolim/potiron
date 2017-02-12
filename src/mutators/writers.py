@@ -1,6 +1,10 @@
 
 """
-@file writers.py
+@file src/mutators/writers.py
+@version 1.0
+@author CN
+@author Gudule
+@date fev 2017
 
 Ce fichier contient les classes principales chargées d'écrire des poèmes.
 
@@ -234,3 +238,4 @@ class PoemWriter:
                     f.write(u + "\n")
                     print(u)
                 print("Le poème a été sauvegardé dans le fichier %s" % fname)
+

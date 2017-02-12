@@ -1,5 +1,9 @@
 """
-@file poemwriters.py
+@file src/mutators/poemwriters.py
+@version 1.0
+@author CN
+@author Gudule
+@date fev 2017
 
 
 Contient des classes qui écrivent des poèmes avec une structure plus précise.
@@ -50,3 +54,4 @@ class DistiqueWriter(PoemWriter):
         super().__init__(strophepat=["AA"],
                         domspat=[[maindom, maindom]],
                         versepat=[[2]])
+

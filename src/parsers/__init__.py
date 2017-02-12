@@ -1,9 +1,9 @@
 """
 @package parsers
-@version 1.1
+@version 1.0
 @author CN
 @author Gudule
-@date jan 2017
+@date fev 2017
 
 Ce package est directement importé du versificateur, un autre projet de
 CN et Gudule. Il s'agit d'une version plus avancée pour le moment.
@@ -49,3 +49,4 @@ def is_alexandrin(text):
                 if e["message"] != verse_parser.HIATUS:
                     return False
             return True
+

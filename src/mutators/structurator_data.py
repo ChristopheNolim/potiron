@@ -1,5 +1,9 @@
 """
-@file
+@file src/mutators/structurator_data.py
+@version 1.0
+@author CN
+@author Gudule
+@date fev 2017
 
 Données nécessaires au structurateur.
 
@@ -259,3 +263,4 @@ LISTS = {
 "oubliée, elle oubliait un mouton vert"
 ]
 }
+

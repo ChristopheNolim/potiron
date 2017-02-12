@@ -1,9 +1,9 @@
 """
 @file src/parsers/syllabes_data.py
-@version 1.1
+@version 1.0
 @author CN
 @author Gudule
-@date jan 2017
+@date fev 2017
 
 Données utilisées pour la découpe en syllabes.
 
@@ -551,3 +551,4 @@ def is_h_aspire(word):
 if __name__ == "__main__":
     print(is_h_aspire("homme"))
     print(is_h_aspire("humain"))
+

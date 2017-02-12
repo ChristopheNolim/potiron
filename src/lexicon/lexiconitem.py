@@ -1,5 +1,9 @@
 """
-@file lexiconitem.py
+@file src/lexicon/lexiconitem.py
+@version 1.0
+@author CN
+@author Gudule
+@date fev 2017
 
 Item de lexique.
 
@@ -125,3 +129,4 @@ class LexiconItem:
 
     def __repr__(self):
         return self._d.__repr__()
+

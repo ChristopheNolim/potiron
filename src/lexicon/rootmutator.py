@@ -1,5 +1,9 @@
 """
-@file rootmutator.py
+@file src/lexicon/rootmutator.py
+@version 1.0
+@author CN
+@author Gudule
+@date fev 2017
 
 Ce fichier contient la racine de tous les mutateurs.
 Il interroge la DB du lexique.
@@ -150,3 +154,4 @@ _COMPOSES = {
 "PASSIFINF" : "INF",
 "PASSIPPRE" : "PPRE"
 }
+

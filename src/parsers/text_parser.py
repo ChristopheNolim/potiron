@@ -1,9 +1,9 @@
 """
 @file src/parsers/text_parser.py
-@version 1.1
+@version 1.0
 @author CN
 @author Gudule
-@date jan 2017
+@date fev 2017
 
 Parse du texte :  découpe en tokens et vérifie que la ponctuation est correcte.
 
@@ -161,4 +161,5 @@ M’a fait sucer encor cet orgueil qui t’étonne;
         # print(s.tokens)
         print(s.line_nbr)
         print(s.err)
+
 

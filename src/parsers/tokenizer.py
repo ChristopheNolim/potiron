@@ -1,9 +1,9 @@
 """
 @file src/parsers/tokenizer.py
-@version 1.1
+@version 1.0
 @author CN
 @author Gudule
-@date jan 2017
+@date fev 2017
 
 
 Outil de découpage du texte en tokens. Chaque token contient :
@@ -189,4 +189,5 @@ if __name__ == "__main__":
     doctest.testmod()
 
     # print(list(tokenize("Gudule demanda-t-il.")))
+
 

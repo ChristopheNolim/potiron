@@ -1,5 +1,10 @@
 """
-Chercher dans le lexique.
+@file src/lexicon/lookup.py
+@version 1.0
+@author CN
+@author Gudule
+@date fev 2017
+
 Utilisé uniquement lorsqu'on parse un texte en entrée, donc
 lorsque l'on taggue.
 
@@ -79,3 +84,4 @@ class LexiconLooker:
                 return LexiconItem.from_entry(r)
 
         return LexiconItem.from_word_gram(word, gram)
+

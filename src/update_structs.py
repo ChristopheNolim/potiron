@@ -1,5 +1,10 @@
 """
-Utiliser ce script pour mettre à jour les structures (mutators/structures.txt)
+@file src/update_structs.py
+@version 1.0
+@author CN
+@author Gudule
+@date fev 2017
+
 """
 
 from mutators.structurator import Structurator
@@ -12,3 +17,4 @@ s.write_lists()
 s.load()
 
 print(s.produce_alexs(1))
+
