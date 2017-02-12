@@ -92,4 +92,5 @@ src/lexicon-builder
 src/tagger
 src/tree_tagger
 src/poems
+Doxyfile.dox
 
