@@ -1,0 +1,125 @@
+ADM	administration	
+MOB	mobilier
+AER	aéronautique	
+MOL	mollusque
+ALI	alimentation	
+MTO	météorologie
+ANA	anatomie	
+MTR	métrique
+ANI	animal(petit)	
+MUS	musique
+ARM	arme	
+MYT	mythologie
+ART	athropode	
+NBR	nombre
+AST	astronomie	
+OBJ	objet
+AUT	automobile	
+OCC	occultisme
+AVI	oiseau	
+OCE	océans
+BAC	bactérie, virus	
+OMB	ver, herpétologie
+BAT	bâtiment	
+ORI	orientalisme
+BIO	biologie	
+PAP	papeterie
+BOI	boisson	
+PAT	pathologie
+BOT	botanique	
+PEA	peausserie
+BOU	boucherie	
+PEC	pêche
+BXA	beaux-arts	
+PEI	peinture industrielle
+CHI	chirurgie	
+PEN	justice, délit
+CHM	chimie	
+PET	pétrole
+CHS	chasse	
+PHA	pharmacie
+CIN	cinéma	
+PHI	philosophie
+COL	couleurs	
+PHN	phonétique
+COM	commerce	
+PHS	préhistoire
+COS	cosmétologie	
+PHT	photographie
+COU	couture	
+PHY	physique
+CRU	crustacé	
+PIS	poissons
+CUL	culture, agriculture	
+PLA	plantes
+CYC	cyclisme	
+POL	politique
+Dnnm	département nn	
+PRE	presse
+DAN	danse	
+PSP	psychiatrie
+DRO	droit	
+PSY	psychologie
+ECN	économie	
+QUA	quantité, quantitatif
+ECR	écriture, écrits	
+RAI	chemin de fer
+ELT	électricité	
+REG	régions, pays
+ELV	élevage	
+REP	reptiles
+ENS	enseignement	
+RLA	relation
+ENT	entomologie	
+RLG	religion
+EQU	équitation	
+ROM	antiquité romaine
+ETH	ethnologie	
+SOC	sociologie
+FAC	façon, manière	
+SOM	corps humain
+FOR	fortification	
+SPE	spectacle
+GAT	gâteau, patisserie	
+SPO	sports
+GEG	géographie	
+SYL	sylviculture
+GEL	géologie	
+TAB	tabac
+GRE	antiquité grecque	
+TEC	technique
+HAB	vêtements	
+TEL	télécommunications
+HIS	histoire	
+TEX	textile
+HRL		
+TOU	tourisme
+HYD	hydrologie	
+TPS	temps
+INF	informatique	
+TRA	travaux publics
+JEU	jeu	
+TYP	typographie
+LAI	lait	
+URB	ville
+LAN	langue	
+VAI	vaisselle
+LIN	linguistique	
+VEH	véhicule, route
+LIT	littérature	
+VER	verrerie
+LOC	locatif, lieux	
+VIT	viticulture
+LOQ	parole, parler	
+VOX	voix, bruit
+MAM	mammifère	
+ZOO	zoologie
+MAN	manutention
+MAR	marine
+MAT	mathématiques
+MEC	mécanique
+MED	médecine
+MEN	menuiserie, bois
+MES	mesure
+MIL	militaire
+MIN	mines

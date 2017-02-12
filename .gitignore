@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+src/lexicon-builder
+src/tagger
+src/tree_tagger
+src/poems
+
