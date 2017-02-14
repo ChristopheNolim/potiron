@@ -120,4 +120,3 @@ class Structurator:
                 res.append( random.choice(self.d[i]) + [_VIRG] )
             res.append ( random.choice(self.d[l[-1]]) + [_POINT] )
         return res
-

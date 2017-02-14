@@ -25,7 +25,7 @@ from tkinter import Text
 
 import random
 import os
-from lexicon import lookup
+from lexicon.lookup import LexiconLooker
 
 try:
     from tagger.tagger import Tagger
@@ -83,6 +83,7 @@ class MainFrame(Frame):
         else:
             self.tagger = None
 
+        self.looker = LexiconLooker()
         self.buttonlookup.grid(row=0, column=0, sticky=E+W+N+S)
         self.buttontag.grid(row=0, column=1, sticky=E+W+N+S)
         self.buttongramtag.grid(row=0, column=2, sticky=E+W+N+S)
@@ -97,6 +98,7 @@ class MainFrame(Frame):
         """
         if TAGGER:
             self.tagger.close()
+        self.looker.close()
         self._root().destroy()
 
     def on_lookup(self, event=None):
@@ -106,11 +108,12 @@ class MainFrame(Frame):
         @todo mauvais comportement
         """
         content = self.text.get("1.0", END).lstrip().rstrip()
-        res = []
-        for l in [lookup(content, "NOM"), lookup(content, "VER") , lookup(content, "ADJ"), lookup(content, "ADV")]:
-            if l:
-                res.append(l)
-        out = "\n".join([str(t) for t in res])
+        res = self.looker.lookup(content, "")
+        out = str(res)
+        # for l in [lookup(content, "NOM"), lookup(content, "VER") , lookup(content, "ADJ"), lookup(content, "ADV")]:
+        #     if l:
+        #         res.append(l)
+        # out = "\n".join([str(t) for t in res])
         self.output.delete("1.0", END)
         self.output.insert("1.0", out)
 
@@ -134,4 +137,3 @@ class MainFrame(Frame):
             self.output.insert("1.0", out)
         else:
             print("Cette fonction n'est pas disponible.")
-

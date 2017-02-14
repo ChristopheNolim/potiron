@@ -54,7 +54,8 @@ class LexiconItem:
     def _input(self, d):
         for k in d:
             if k in _KEYS:
-                self._d[k] = d[k]
+                if d[k] != "":
+                    self._d[k] = d[k]
 
     @staticmethod
     def from_word_gram(word, gram):
@@ -135,13 +136,15 @@ class LexiconItem:
 
     def dismiss_non_grammar(self, ex=[]):
         """
-        Retire certains tags qui ne correspondent pas à la grammaire / versification,
+        Retire certains tags qui ne correspondent pas à la grammaire,
         mais laisse l'orthographe. Ne fait ça que pour les noms, adjs et verbes.
+
+        DOIT laisser la versification.
         """
-        if self["orth"]in ex:
+        if self["orth"] in ex:
             return self
         if self["gram"] in ["NOM", "ADJ", "VER"]:
-            for k in _NON_GRAM_KEYS + _VERSE_KEYS:
+            for k in _NON_GRAM_KEYS:
                 if k in self._d:
                     del self._d[k]
         return self
@@ -151,4 +154,3 @@ class LexiconItem:
 
     def __repr__(self):
         return self._d.__repr__()
-

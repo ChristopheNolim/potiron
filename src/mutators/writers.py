@@ -152,10 +152,14 @@ class StropheWriter2:
 
                 if len(list(set(lemmas + newlemmas))) == len(lemmas + newlemmas):
                     # possib = format_out([ truc["orth"] for truc in choice ])
+                    # t1 = " ".join([t["orth"] for t in choice])
                     tmp = format_tagged(choice)
+
                     if is_alexandrin(tmp):
+
                         found = True
                         possib = format_out([ truc["orth"] for truc in tmp ])
+
                         res.append(possib)
                         lemmas = lemmas + newlemmas
 

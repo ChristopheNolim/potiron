@@ -49,9 +49,32 @@ markov = {
 "ECR" : ["LITT", "LIN"]
 }
 
+
+# Pourquoi invoques - tu, présage dépassée,
+#  Qui, recommandant, refuses un trilobite fonceur.
+#  Un scorpion casanier moquait un vendangeur,
+#  Qui, récusé, mouftait les articles sensés.
+#
+#
+#  Tels d'assommants béguins, d'affligeants fourvoiements,
+#  Oubliaient les prévoyances des fléchissements cléments,
+#  Appelés, ils mouftaient les fripons acariens.
+#  Un néon répugnant retraçait ses liens.
+#
+#
+#  Ainsi qu'un néon, un énervement vantard,
+#  Mouftait les araignées des acariens trouillards,
+#  Qui, redits, discouraient un gribouille tricheur.
+#
+#
+#  Pourquoi gaussez - vous, ô mygales compassées,
+#  Qui, indiquées, moquez les confiants vendangeurs.
+#  Toi, taf feignant, charrie ton bellâtre coincé.
+
+
 t = Tagger()
 
-tmp = t.tag(" une conception affectée oubliait un scorpion,")
+tmp = t.tag("un lien divertissant oubliait un perfectionnisme,")
 tmp2 = format_tagged(tmp)
 # for truc in tmp2:
 #     print(truc)
@@ -59,4 +82,3 @@ tmp2 = format_tagged(tmp)
 print(is_alexandrin(tmp2, verbose=True))
 
 t.close()
-
