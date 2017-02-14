@@ -11,7 +11,10 @@ Item de lexique.
 
 import json
 
-_KEYS = ["orth", "gram", "pron", "genra", "nb", "typ", "dom", "niv", "temps", "pers", "more", "lemma", "aux"]
+#count int, hasdie boolean, syllmuette boolean, emuet boolean, haspi boolean
+
+_KEYS = ["orth", "gram", "pron", "genra", "nb", "typ", "dom", "niv", "temps", "pers", "more", "lemma", "aux", "count", "hasdie", "syllmuette", "emuet", "haspi"]
+_VERSE_KEYS = ["count", "hasdie", "syllmuette", "emuet", "haspi"]
 _NON_GRAM_KEYS = ["pron", "typ", "dom", "niv"] # pour l'instant laisser l'orthographe
 # edit : je supprime aussi lemma
 
@@ -42,7 +45,7 @@ class LexiconItem:
 
     Un item de lexique et les différentes méthodes pour le sauvegarder,
     le transformer en dictionnaire, etc.
-    
+
     """
 
     def __init__(self):
@@ -62,9 +65,9 @@ class LexiconItem:
 
     @staticmethod
     def from_entry(entry):
-        if type(entry) != tuple or len(entry) != 12:
+        if type(entry) != tuple or len(entry) != 17:
             raise Exception("Bad entry provided !")
-        orth, gram, lemma, pron, genra, nb, typ, dom, niv, temps, pers, more = entry
+        orth, gram, lemma, pron, genra, nb, typ, dom, niv, temps, pers, more, count, hasdie, syllmuette, emuet, haspi = entry
         d = dict()
         d["orth"] = orth
         d["gram"] = gram
@@ -78,6 +81,12 @@ class LexiconItem:
         d["temps"] = temps
         d["pers"] = pers
         d["more"] = more
+        # ces clés sont pour la versification uniquement
+        d["count"] = count
+        d["hasdie"] = hasdie
+        d["syllmuette"] = syllmuette
+        d["emuet"] = emuet
+        d["haspi"] = haspi
         addaux(d)
         return LexiconItem.from_dict(d)
 
@@ -97,6 +106,10 @@ class LexiconItem:
         if k in _KEYS:
             if k in self._d:
                 return self._d[k]
+            elif k == "count":
+                return 0
+            elif k in ["hasdie", "syllmuette", "emuet", "haspi"]:
+                return False
             else:
                 return ""
         else:
@@ -112,14 +125,23 @@ class LexiconItem:
         n._input(d)
         return n
 
+    def copy(self):
+        n = LexiconItem()
+        n._input(self.to_dict())
+        return n
+
     def to_dict(self):
         return self._d
 
     def dismiss_non_grammar(self, ex=[]):
-        if self["orth"] in ex:
+        """
+        Retire certains tags qui ne correspondent pas à la grammaire / versification,
+        mais laisse l'orthographe. Ne fait ça que pour les noms, adjs et verbes.
+        """
+        if self["orth"]in ex:
             return self
-        if self["gram"] in ["ADV", "NOM", "ADJ", "VER"]:
-            for k in _NON_GRAM_KEYS:
+        if self["gram"] in ["NOM", "ADJ", "VER"]:
+            for k in _NON_GRAM_KEYS + _VERSE_KEYS:
                 if k in self._d:
                     del self._d[k]
         return self

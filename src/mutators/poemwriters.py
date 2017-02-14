@@ -15,13 +15,13 @@ from mutators.writers import PoemWriter
 
 import random
 
-# DOMS = list()
-#
-# with open("mutators/doms.txt") as f:
-#     for line in f:
-#         dom = line.split("\t")[0].rstrip().lstrip()
-#         if dom.isupper():
-#             DOMS.append(dom)
+
+
+_QUATRAIN_PAT = ["AABB", "ABBA", "ABAB"]
+
+_BISTROPHE_PAT = ["EEFFGG", "EFFEGG", "EFEFGG",
+                "EEFGGF", "EEFGFG"]
+
 
 class SonnetWriter(PoemWriter):
     """
@@ -36,14 +36,14 @@ class SonnetWriter(PoemWriter):
     """
 
     def __init__(self, maindom="PHY"):
-        super().__init__(strophepat=["AABB", "CCDD", "EEFFGG"],
+        super().__init__(strophepat=[random.choice(_QUATRAIN_PAT), random.choice(_QUATRAIN_PAT), random.choice(_BISTROPHE_PAT)],
                         domspat=[[maindom, maindom, maindom, maindom], [maindom, maindom, maindom, maindom], [maindom, maindom, maindom, maindom, maindom, maindom]],
                         versepat=[[4], [4], [3,3]])
 
 class QuatrainsWriter(PoemWriter):
 
     def __init__(self, nb=1, maindom="PHY"):
-        super().__init__(strophepat=[random.choice(["ABAB", "AABB", "ABBA"]) for i in range(nb)],
+        super().__init__(strophepat=[random.choice(_QUATRAIN_PAT) for i in range(nb)],
                         domspat=[ [maindom for i in range(4)] for j in range(nb)],
                         versepat=[[4] for i in range(nb)])
 

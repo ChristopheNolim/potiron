@@ -41,7 +41,7 @@ class LexiconLooker:
 
     def __init__(self):
         currentdir = os.path.dirname(os.path.abspath(__file__))
-        fname = os.path.join(currentdir, 'lexicon/lexique.db')
+        fname = os.path.join(currentdir, "lexique.db")
         self.conn = sqlite3.connect(fname)
 
     def close(self):
@@ -83,5 +83,27 @@ class LexiconLooker:
             for r in tmp:
                 return LexiconItem.from_entry(r)
 
+        # TODO bof, très bof. Permet de retrouver les petits mots (articles, etc)
+        # mais se plante souvent puisqu'aucune information de POS du tagger n'est récupérée
+        # deuxième essai
+        tmp = self.conn.execute(
+            """SELECT * from lexique WHERE (orth=?)""", (word,))
+        if tmp:
+            for r in tmp:
+                t = LexiconItem.from_entry(r)
+                if t["gram"] not in ["VER", "ADV", "NOM", "ADJ"]:
+                    # sinon on le saurait déjà
+                    return t
+
         return LexiconItem.from_word_gram(word, gram)
+
+    # def lookup_general(self, word):
+    #     """
+    #     Si on ne connaît pas la gram fu mot ou que le tag du tagger ne fonctionne pas bien.
+    #     """
+    #     tmp = self.conn.execute(
+    #         """SELECT * from lexique WHERE (orth=?)""", (word,))
+    #     if tmp:
+    #         for r in tmp:
+    #             return LexiconItem.from_entry(r)
 

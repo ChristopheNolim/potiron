@@ -207,7 +207,6 @@ LISTS = {
 "dans la moule verte, de vertes moules",
 "dans la verte moule, de vertes moules",
 "tels de verts moutons, de verts moutons",
-"oubliant les moutons, un vert mouton",
 "tels de verts moutons, de verts moutons",
 "dans la moule verte, de vertes moules",
 "telles des moules, de vertes moules",

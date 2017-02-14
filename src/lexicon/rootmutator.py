@@ -13,7 +13,7 @@ Il interroge la DB du lexique.
 import random
 import sqlite3
 from lexicon.lexiconitem import LexiconItem, addaux
-
+import os
 
 class RootMutator:
     """
@@ -23,7 +23,9 @@ class RootMutator:
     """
 
     def __init__(self):
-        self.conn = sqlite3.connect('lexicon/lexique.db')
+        currentdir = os.path.dirname(os.path.abspath(__file__))
+        fname = os.path.join(currentdir, "lexique.db")
+        self.conn = sqlite3.connect(fname)
 
     def close(self):
         self.conn.close()

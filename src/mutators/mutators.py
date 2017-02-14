@@ -12,7 +12,7 @@ perdu l'adresse. Si vous la retrouvez merci de me l'indiquer !)
 """
 
 from lexicon.rootmutator import RootMutator
-from tagger.formatter import format_out
+from mutators.formatter import format_out
 import random
 
 class SelectiveMutator(RootMutator):

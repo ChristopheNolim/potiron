@@ -94,3 +94,5 @@ src/tree_tagger
 src/poems
 Doxyfile.dox
 doxydoc/
+anonymizator.py
+src/parsers/

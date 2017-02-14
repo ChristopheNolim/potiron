@@ -54,7 +54,6 @@ CUL	culture, agriculture
 PLA	plantes
 CYC	cyclisme	
 POL	politique
-Dnnm	département nn	
 PRE	presse
 DAN	danse	
 PSP	psychiatrie

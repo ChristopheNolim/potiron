@@ -81,9 +81,12 @@ class Structurator:
         t = Tagger()
         currentdir = os.path.dirname(os.path.abspath(__file__))
         fname = os.path.join(currentdir, "structures.txt")
+        # TODO : tagguer par liste (plus rapide)
         with open(fname, "w") as f:
             for i in LISTS:
-                s = (i, [[v.dismiss_non_grammar(ex=["pourquoi", "ainsi", "dans", "tels", "tel", "comme", "qui"]).to_dict() for v in t.tag(u)] for u in _LISTS[i]])
+                tagged = t.tag_list(LISTS[i])
+                s = (i, [[v.dismiss_non_grammar(ex=["pourquoi", "ainsi", "dans", "tels", "tel", "comme", "qui"]).to_dict() for v in u] for u in tagged])
+                # s = (i, [[v.dismiss_non_grammar(ex=["pourquoi", "ainsi", "dans", "tels", "tel", "comme", "qui"]).to_dict() for v in t.tag(u)] for u in LISTS[i]])
                 f.write(json.dumps(s) + "\n")
         t.close()
         print("Structurator : Done writing !")

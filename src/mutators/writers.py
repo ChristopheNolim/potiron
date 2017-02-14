@@ -12,8 +12,8 @@ Ce fichier contient les classes principales chargées d'écrire des poèmes.
 
 from mutators.mutators import DefaultDomMutator
 import random
-from tagger.formatter import format_out
-from parsers import is_alexandrin
+from mutators.formatter import format_out, format_tagged
+from verses import is_alexandrin
 from mutators.structurator import Structurator
 import time
 import os
@@ -151,9 +151,11 @@ class StropheWriter2:
                 newlemmas = [c["lemma"] for c in choice if c["lemma"] != "" and c["gram"] in ["VER", "ADJ", "NOM", "ADV"]]
 
                 if len(list(set(lemmas + newlemmas))) == len(lemmas + newlemmas):
-                    possib = format_out([ truc["orth"] for truc in choice ])
-                    if is_alexandrin(possib):
+                    # possib = format_out([ truc["orth"] for truc in choice ])
+                    tmp = format_tagged(choice)
+                    if is_alexandrin(tmp):
                         found = True
+                        possib = format_out([ truc["orth"] for truc in tmp ])
                         res.append(possib)
                         lemmas = lemmas + newlemmas
 
