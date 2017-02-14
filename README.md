@@ -1,17 +1,31 @@
 # potiron
 Utilitaire de manipulation du langage naturel.
 
+## Packages nécessaires
+
 Potiron est programmé en python3 et utilise les packages suivants :
 * json (pour la sérialisation de certaines données)
 * sqlite3 (pou la manipulation de DB)
 
+## Documentaion
+
 La documentation et beaucoup de commentaires sont en français, 
 parce que Potiron ne manipule que du français.
 
+## Licence
+
+Potiron est en libre téléchargement sous licence LGPL, car il utilise des données
+sous licence LGPL. Plus d'informations dans la documentation du package lexicon.
+
 L'image de potiron est libre de droits et provient de Pixabay.
+
+## Utilisation
 
 Potiron est encore en développement. Il ne comporte pas d'interface graphique,
 mais il est possible de le tester avec le fichier demo.py.
+
+Pour utiliser cette démo, décompressez l'archive zip dans le dossier de votre 
+choix, ensuite lancez demo.py dans un terminal.
 
 Le fichier demo.py permet de produire facilement des sonnets. Cela peut
 prendre plusieurs secondes, voire une demi-minute dans les pires cas, et
@@ -28,11 +42,12 @@ Pour écrire un sonnet sur un domaine particulier (la liste provient du DEM,
 et est disponible dans doms.txt), lancez :
 python3 demo.py sonnet (votre domaine)
 
-Potiron est en libre téléchargement sous licence LGPL, car il utilise des données
-sous licence LGPL. Plus d'informations dans la documentation du package lexicon.
+## Notes
 
 Potiron ne peut actuellement pas faire grand-chose d'autre qu'écrire des poèmes,
 car il n'est pas distribué avec un POS tagger.
+
+## Bugs
 
 En cas de bug ou d'alexandrin mal formé (cela arrive régulièrement, car
 le compte sur lequel se base Potiron comporte des bugs et des omissions),
