@@ -77,4 +77,3 @@ if __name__ == "__main__":
             else:
                 s = SonnetWriter(maindom=dom)
                 s.write_save()
-

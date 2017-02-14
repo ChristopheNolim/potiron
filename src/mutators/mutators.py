@@ -12,7 +12,7 @@ perdu l'adresse. Si vous la retrouvez merci de me l'indiquer !)
 """
 
 from lexicon.rootmutator import RootMutator
-from mutators.formatter import format_out
+from mutators.formatter import format_out, format_tagged
 import random
 
 class SelectiveMutator(RootMutator):
@@ -64,7 +64,7 @@ class SynonymsMutator(SelectiveMutator):
         possib = []
         for t in tagged_sent:
             possib.append(self.synonyms(t))
-        return format_out( [random.choice(c)["orth"] for c in possib] )
+        return format_out([ t["orth"] for t in format_tagged( [random.choice(c) for c in possib] )])
 
 
 class SameDomMutator(SelectiveMutator):
@@ -83,7 +83,7 @@ class SameDomMutator(SelectiveMutator):
         possib = []
         for t in tagged_sent:
             possib.append(self.mutations(t, endpron="", dom=t["dom"], niv=""))
-        return format_out( [random.choice(c)["orth"] for c in possib] )
+        return format_out([ t["orth"] for t in format_tagged( [random.choice(c) for c in possib] )])
 
 
 class DefaultDomMutator(SelectiveMutator):
@@ -178,4 +178,3 @@ class DomMutator(SelectiveMutator):
             return choices
         else:
             return [tmp]
-

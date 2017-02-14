@@ -194,7 +194,7 @@ _H_ASPIRE = [
 
 _SENT = "!?:."
 
-def _format_out(out):
+def format_out(out):
     """
     Formate une liste de mots en sortie, renvoie une chaîne de caractères.
     Gère la ponctuation.
@@ -395,4 +395,3 @@ def format_tagged(lexitems):
 #             words2.append(w)
 #             i += 1
 #     return _format_out(words2)
-

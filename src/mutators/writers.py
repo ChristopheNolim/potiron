@@ -12,7 +12,7 @@ Ce fichier contient les classes principales chargées d'écrire des poèmes.
 
 from mutators.mutators import DefaultDomMutator
 import random
-from mutators.formatter import format_out, format_tagged
+from mutators.formatter import format_tagged, format_out
 from verses import is_alexandrin
 from mutators.structurator import Structurator
 import time
@@ -240,4 +240,3 @@ class PoemWriter:
                     f.write(u + "\n")
                     print(u)
                 print("Le poème a été sauvegardé dans le fichier %s" % fname)
-
