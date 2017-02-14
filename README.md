@@ -1,5 +1,12 @@
 # potiron
-Utilitaire de manipulation du langage naturel.
+Utilitaire de manipulation du français. Écriture automatique de poèmes.
+
+## Important
+
+Potiron currently does not handle the english language, nor does it have English documentation.
+This stems from the fact that it is mainly tailored for French and French poetry. In the future,
+when supplied with the correct data and / or POS taggers, some of the potiron features
+may handle English and / or German. However, this is not a priority.
 
 ## Packages nécessaires
 
